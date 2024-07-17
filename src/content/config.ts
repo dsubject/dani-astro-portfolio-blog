@@ -5,7 +5,7 @@ export const blogPostDataSchema = z.object({
   title: z.string(),
   description: z.string(),
   pubDate: z.date(),
-  tags: z.string(),
+  tags: z.array(z.string()),
   updatedDate: z.date().optional()
 });
 

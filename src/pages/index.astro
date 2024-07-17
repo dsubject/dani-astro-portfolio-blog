@@ -39,10 +39,10 @@ const posts = await getCollection('blog').then((posts) => {
     <h2>Recent Posts</h2>
     <ul class="recent-posts-list">
       {posts.slice(0, 3).map((post) => (
-        <li class="card" key={post.slug}>
+        <li class="card">
           <a class="recent-posts-links" href={`/blog/${post.slug}`}>
             <div class="tags">
-              {post.data.tags.map(tag => (
+              {post.data.tags.map((tag: string) => (
               <span>{tag}</span>
               ))}
             </div>

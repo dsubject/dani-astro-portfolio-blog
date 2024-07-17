@@ -1,0 +1,18 @@
+---
+import HeaderLink from './HeaderLink.astro';
+import { SITE_TITLE } from '../consts';
+import ThemeIcon from './ThemeIcon.astro';
+---
+
+<header>
+	<nav class="navbar">
+		<div class="navbar__menu">
+			<HeaderLink href="/">Home</HeaderLink>
+			<HeaderLink href="/blog">Blog</HeaderLink>
+			<HeaderLink href="/about">About</HeaderLink>
+		</div>
+		<div class="theme-icon-container">
+			<ThemeIcon />
+		</div>
+	</nav>
+</header>

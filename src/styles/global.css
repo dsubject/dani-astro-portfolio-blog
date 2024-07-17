@@ -1,0 +1,374 @@
+/* Global styles */
+:root {
+    --background: #1e1e2e; 
+    --background-light: #FFF6F1;
+    --button: #78c2ad;
+    --text: #FFF6F1;
+    --text-light: #1e1e2e; 
+    --text-link-light: #6265b4;
+    --underline: #375a7f;
+    --header: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    --body: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+html {
+    background-color: var(--background);
+    color: var(--text);
+}
+
+html.light {
+    background-color: var(--background-light);
+    color: var(--text-light);
+}
+
+body {
+    max-width: 47rem;
+    margin: auto;
+    padding: 1.5rem 1.45rem;
+}
+
+h1, h2 {
+    font-family: var(--header);
+    font-weight: normal;
+}
+
+h1 {
+    font-size: 2.6rem;
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+h2 {
+    margin-bottom: 0;
+    font-weight: normal;
+}
+
+p {
+    font-family: var(--body);
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+small, li {
+    font-family: var(--body); 
+}
+
+.landing-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.title-img-container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 4.2rem;
+}
+
+.home-title {
+    font-weight: 700;
+    letter-spacing: -.05em;
+    align-self: center;
+}
+
+.bio-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Social Links */
+
+.social-links {
+    margin-top: 20px;
+}
+  
+.social-list-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px; /* Adjust spacing between icons as needed */
+    justify-content: flex-start;
+}
+
+.icon-link {
+    text-decoration: none;
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Space between icon and text */
+}
+
+html.light .icon-link {
+    color: var(--text-light);
+}
+
+.icon-btn:hover {
+    transform: scale(1.1); /* Slightly expand on hover */
+    text-decoration: underline;
+    text-decoration-color: #A562AF;
+  }
+
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+}
+
+.social-icon::before {
+margin-right: 8px;
+}
+
+.git-icon::before {
+    content: url('/github-icon-white.svg');
+}
+
+.linkedin-icon::before {
+    content: url('/linkedin-icon-white.svg');
+}
+
+html.light .git-icon::before {
+    content: url('/github-icon-black.svg');
+}
+
+html.light .linkedin-icon::before {
+    content: url('/linkedin-icon-black.svg');
+}
+
+@media (max-width: 600px) {
+    .title-img-container {
+      flex-direction: column;
+      align-items: center;
+    }
+    .bio-content {
+        flex-direction: column;
+        display: flex;
+      /* align-items: center; */
+    }
+  }
+
+/* Navigation Bar */
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.8rem;
+    width: 100%;
+}
+
+.navbar__title {
+    font-family: var(--header);
+    font-size: 1.3rem;
+}
+
+.navbar__menu {
+    font-family: var(--body);
+    font-size: 1.1rem;
+    flex: 1;
+}
+
+.theme-icon-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navbar__title > a, .navbar__menu > a {
+    /* fetching light/dark theme colour */
+    color: var(--text);
+}
+
+img {
+    animation: loadAnimation 3s ease-out forwards;
+}
+
+.landing-img {
+    width: 100%;
+    max-width: 400px; /* Adjust this value to your desired maximum width */
+    height: auto; /* Maintains the aspect ratio */
+    display: block; /* Ensures no inline spacing issues */
+    margin: 0 auto; /* Center the image horizontally if the container is wider */
+  }
+
+@keyframes loadAnimation {
+    0% {
+        clip-path: inset(100% 0 0 0);
+    }
+    100% {
+        clip-path: inset(0 0 0 0);
+        opacity: 1;
+    }
+}
+
+/* Cards */
+.card {
+    background: var(--background);
+    border-radius: 12px;
+    box-shadow: 0 4px 8px var(--background-light);
+    padding: 1rem;
+    transition: transform 0.2s;
+}
+
+.card {
+    list-style: none;
+}
+
+html.light .card{
+    background: var(--background-light);
+    box-shadow: 0 4px 8px #F56F7E;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+html.light .card a {
+    text-decoration: none;
+    color: var(--text-light);
+}
+.card a {
+    text-decoration: none;
+    color: var(--text);
+}
+
+.recent-posts-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0;
+}
+
+.tags {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.tags span {
+    background-color: #D7629C;
+    color: var(--text);
+    border-radius: 0.25rem;
+    font-size: .75rem;
+    padding: 0.25rem 0.5rem;
+    margin-right: 5px;
+}
+
+/* Items */
+.pro-img {
+    border-radius: 16px;
+    margin-top: 10px;
+}
+
+/* Footer */
+footer {
+    margin: 4rem 0;
+}
+
+.footer-list-items {
+    cursor: default;
+    list-style: none;
+    padding: 0;
+}
+
+.footer-container {
+    text-align: center;
+}
+
+.footer-link {
+    color: var(--text);
+}
+
+html.light .footer-link {
+    color: var(--text-link-light);
+}
+
+/* 404 */
+.lost {
+    margin-top: 30%;
+    text-align: center;
+}
+
+.lost__header {
+    margin: 0 auto;
+    text-align: center;
+    border: 0;
+    font-size: 7.5rem;
+    letter-spacing: 10px;
+}
+
+.lost__body {
+    color: #5C5B77;
+}
+
+.lost__link {
+    color: var(--text-link);
+    text-decoration: none;
+}
+
+/* Theme Icon */
+
+.light .navbar__title > a {
+    color: var(--text-light);
+}
+
+.light .navbar__menu > a {
+    color: var(--text-light);
+}
+
+.light .card__title {
+    color: var(--text-light); 
+}
+
+.light .card__txt {
+    color: var(--text-light); 
+}
+
+.light .btn {
+    color: var(--text-light);
+}
+
+.light .btn:hover {
+    color: var(--text);
+}
+
+/* Carbon Badge */
+#wcb_g {
+    color: var(--text-link-light);
+    border-color: var(--text-link-light) !important;
+    background-color: var(--background-light) !important;
+} 
+
+#wcb.wcb-d #wcb_a {
+    background: var(--text-link-light) !important;
+    color: var(--background-light) !important;
+    border-color: var(--text-link-light) !important;
+} 
+
+/* Media Query */
+@media only screen and (max-width: 600px) {
+    .navbar__title {
+        text-align: center;
+    }
+
+    .navbar__menu {
+        text-align: center;
+        flex: unset;
+    }
+
+    .navbar__menu > a {
+        margin: 0 11px;
+    }
+
+    .landing-container {
+        text-align: center;
+    }
+
+    .social-list-items {
+        justify-content: center;
+    }
+}
+
+
+
+
+

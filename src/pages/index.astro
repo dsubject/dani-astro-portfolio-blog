@@ -1,0 +1,57 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getCollection } from "astro:content";
+import { sortPostsByDateDesc, sortPostsByDateAsc } from "../utils/functions";
+
+const pageTitle = "Dani Subject";
+
+// Fetch and log the blog posts
+const posts = await getCollection('blog').then((posts) => {
+  return sortPostsByDateDesc(posts);
+});
+---
+
+<Layout pageTitle={pageTitle}>
+  <div class="landing-container">
+    <div class="title-img-container">
+      <div class="bio-content">
+        <h1 class="home-title">Dani Subject, developer and sustainable web advocate</h1>
+        <div class="social-links">
+          <ul class="social-list-items">
+            <li class="icon-btn">
+              <a class="icon-link" href="https://github.com/dsubject" target="_blank">
+                <span class="social-icon git-icon">GitHub</span>
+              </a>
+            </li>
+            <li class="icon-btn">
+              <a class="icon-link" href="https://linkedin.com/in/danielle-subject" target="_blank">
+                <span class="social-icon linkedin-icon">LinkedIn</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <img class="landing-img" loading="lazy" alt="Cartoon image of a woman sitting with her dog on a bench" src="/cropped-cartoon-2.png" />
+    </div>
+    <p>
+      As a developer who cares about my impact on the planet, I believe sustainable code matters. My focus is on staying up-to-date with accessibility and sustainability best practices and educating other developers in the hope of building a digital future we can be proud of.
+    </p>
+    <h2>Recent Posts</h2>
+    <ul class="recent-posts-list">
+      {posts.slice(0, 3).map((post) => (
+        <li class="card" key={post.slug}>
+          <a class="recent-posts-links" href={`/blog/${post.slug}`}>
+            <div class="tags">
+              {post.data.tags.map(tag => (
+              <span>{tag}</span>
+              ))}
+            </div>
+            <h3>{post.data.title}</h3>
+            <p>{post.data.description}</p>
+            <small>{new Date(post.data.pubDate).toLocaleDateString()}</small>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+</Layout>

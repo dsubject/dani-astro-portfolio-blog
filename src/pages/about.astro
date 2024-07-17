@@ -1,0 +1,69 @@
+---
+import Layout from '../layouts/BlogPost.astro';
+---
+
+<Layout
+	title="About Me"
+	description="Lorem ipsum dolor sit amet"
+	pubDate={new Date('August 08 2021')}
+	heroImage="/blog-placeholder-about.jpg"
+>
+<div>
+<div class="about-txt">
+<p>
+    Hello! My name is Dani Subject, and I'm an English major turned software developer. I've been developing for 6 years now, 
+	having worked in start-ups and currently consulting at a larger corporation. Due to the nature of consulting, I've had the opportunity to develop 
+	a wide variety of applications, from web to iOS and Android. However, I'll always be a JavaScript developer at heart. 
+	I've worked with multiple frameworks, including Angular and React, but I don't believe in limiting myself to one framework. Part of being a 
+	sustainable developer is knowing how to pick the right technology for the job. Sometimes, all you need is a static 
+	site to do the trick.
+  </p>
+		<img width="350" height="350" src="/irl-me.png" alt="Description of image 1" />
+				</div>
+  <p>
+    I've always been an environmentalist. I'm very involved in community garden planting outside of work, and you may have seen some photos of me with beehives. Naturally, my love for the planet has found its way into my life as a coder. I believe sustainable digital products are the future: as developers, it is our responsibility to reduce our digital footprint as much as possible by writing code that is efficient, clean, and maintainable. Building applications that minimize energy usage on our users' devices, reduce the digital world's carbon footprint, and remain reliable even when the grid or network is down is crucial. We must develop software that doesn't contribute to climate problems while ensuring it stays accessible and functional for users in all conditions. Afterall, <i><b>none of this matters if we don't have a planet to stand on.</b></i>
+  </p>
+
+</div>
+
+
+<style>
+.about-txt {
+	display: flex;
+	flex-direction: row;
+}
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .gallery img {
+      flex: 1 1 calc(33% - 20px);
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    @media (max-width: 768px) {
+		.about-txt {
+			display: flex;
+			flex-direction: column;
+		}
+		img {
+			align-self: center;
+		}
+    }
+
+    @media (max-width: 480px) {
+		.about-txt {
+			display: flex;
+			flex-direction: column;
+		}
+		img {
+			align-self: center;
+		}
+    }
+  </style>
+</Layout>

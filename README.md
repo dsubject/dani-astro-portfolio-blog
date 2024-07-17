@@ -1,26 +1,32 @@
 # Dani Subject's Website and Blog
 
-## About
-
 This is my personal website and blog, built with Astro. Here, I share my journey as a software developer, my passion for sustainability, and various projects I've worked on.
 
-## Table of Contents
+<p align="center">
+  <img align="center" alt="Astro" src="https://storage.googleapis.com/dev-portal-bucket/qh7sxskkyty67x3fznww5mwv4pxq59dk2aax51.webp"/>
+</p>
 
-1. [About](#about)
-2. [Features](#features)
-3. [Usage](#usage)
-4. [Homepage Details](#homepage-details)
-5. [License](#license)
-6. [Contact](#contact)
+[![Built with Astro](https://astro.badg.es/v2/built-with-astro/tiny.svg)](https://astro.build) [![Netlify Status](https://api.netlify.com/api/v1/badges/0b0bcb79-a1d8-4b32-9566-8f30af19e4cc/deploy-status)](https://app.netlify.com/sites/danisubject/deploys)
 
 ## Features
+- [x] Simple design focused on sustainability
+- [x] Responsive layout for seamless viewing across different devices
+- [x] Fast and efficient, thanks to the Astro static site generator
 
-- Homepage with a personal introduction, social links, and a display of recent blog posts with titles, descriptions, and published dates
-- About page with more information
-- Blog page with a catalog of all of my blog posts
-- Responsive design for various devices
-- Sustainable coding practices
+## Project Structure
 
-## Usage
+```
+/
+├── public/
+├── src/
+│   ├── components/
+│   ├── content/
+│   ├── layouts/
+│   ├── pages/
+│   ├── styles/
+|   ├── utils/
+└── package.json
+```
 
-The code in this repository showcases the structure and components used to build my site. Feel free to explore the code to understand how it all works.
+## 📃 License
+This project is licensed under the MIT License. See the `LICENSE` file for details.

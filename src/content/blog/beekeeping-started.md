@@ -2,8 +2,6 @@
 slug: "/blog/how-i-started-beekeeping"
 pubDate: "2020-05-12"
 title: "How I started keeping bees — and how you can too! 🐝 "
-featuredImage: daniBeekeeper.png
-featuredImgAlt: "The author kneeling next to one of her hives"
 tags: ["beekeeping"]
 description: "Beekeeping fell into my lap the same way software development did: a spur of the moment decision sparked by a random conversation with a friend."
 ---

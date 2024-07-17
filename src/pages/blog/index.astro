@@ -8,15 +8,12 @@ import { getCollection } from 'astro:content';
 const posts = (await getCollection('blog')).sort(
   (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
 );
-
-// Log posts to the server console
-console.log(posts);
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
-    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <BaseHead title={`Blog | ${SITE_TITLE}`} description="Dani Subject's Blog" />
     <style>
 		main {
 			margin-top: 5rem;

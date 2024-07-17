@@ -1,8 +1,11 @@
 ---
 import Layout from '../layouts/BlogPost.astro';
+import { SITE_TITLE } from '../consts';
+
+const updatedDate = '2024-07-17'; // Set the last updated date here
 ---
 
-<Layout pageTitle="About">
+<Layout title={`About | ${SITE_TITLE}`} description="About Dani Subject">
 	<div>
 		<div class="about-txt">
 			<p>

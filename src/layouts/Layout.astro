@@ -12,6 +12,12 @@ const { pageTitle } = Astro.props;
         <meta charset="utf-8" />
         <meta name="description" content="Astro description">
         <meta name="viewport" content="width=device-width" />
+        <!-- Open Graph Meta Tags -->
+        <meta property="og:title" content="Dani Subject">
+        <meta property="og:description" content="Dani Subject's portfolio and blog - showcasing sustainable web development insights and tips for efficient coding. Follow for expert advice and personal stories from the tech industry.">
+        <meta property="og:image" content="/site-favicon.png">
+        <meta property="og:url" content="https://daniellesubject.com">
+        <meta property="og:type" content="website">
         <link rel="icon" type="image/png" href="/site-favicon.png" />
         <meta name="generator" content={Astro.generator} />
         <title>{pageTitle}</title>

@@ -23,6 +23,3 @@ This is my personal website and blog, built with Astro. Here, I share my journey
 |   ├── utils/
 └── package.json
 ```
-
-## 📃 License
-This project is licensed under the MIT License. See the `LICENSE` file for details.

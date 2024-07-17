@@ -1,10 +1,10 @@
 /* Global styles */
 :root {
-    --background: #1e1e2e; 
+    --background: #1e1e2e;
     --background-light: #FFF6F1;
     --button: #78c2ad;
     --text: #FFF6F1;
-    --text-light: #1e1e2e; 
+    --text-light: #1e1e2e;
     --text-link-light: #6265b4;
     --underline: #375a7f;
     --header: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
@@ -27,7 +27,8 @@ body {
     padding: 1.5rem 1.45rem;
 }
 
-h1, h2 {
+h1,
+h2 {
     font-family: var(--header);
     font-weight: normal;
 }
@@ -49,8 +50,9 @@ p {
     line-height: 1.5;
 }
 
-small, li {
-    font-family: var(--body); 
+small,
+li {
+    font-family: var(--body);
 }
 
 .landing-container {
@@ -81,13 +83,14 @@ small, li {
 .social-links {
     margin-top: 20px;
 }
-  
+
 .social-list-items {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
-    gap: 20px; /* Adjust spacing between icons as needed */
+    gap: 20px;
+    /* Adjust spacing between icons as needed */
     justify-content: flex-start;
 }
 
@@ -96,7 +99,8 @@ small, li {
     color: var(--text);
     display: flex;
     align-items: center;
-    gap: 8px; /* Space between icon and text */
+    gap: 8px;
+    /* Space between icon and text */
 }
 
 html.light .icon-link {
@@ -104,10 +108,11 @@ html.light .icon-link {
 }
 
 .icon-btn:hover {
-    transform: scale(1.1); /* Slightly expand on hover */
+    transform: scale(1.1);
+    /* Slightly expand on hover */
     text-decoration: underline;
     text-decoration-color: #A562AF;
-  }
+}
 
 .social-icon {
     display: inline-flex;
@@ -116,7 +121,7 @@ html.light .icon-link {
 }
 
 .social-icon::before {
-margin-right: 8px;
+    margin-right: 8px;
 }
 
 .git-icon::before {
@@ -137,15 +142,16 @@ html.light .linkedin-icon::before {
 
 @media (max-width: 600px) {
     .title-img-container {
-      flex-direction: column;
-      align-items: center;
+        flex-direction: column;
+        align-items: center;
     }
+
     .bio-content {
         flex-direction: column;
         display: flex;
-      /* align-items: center; */
+        /* align-items: center; */
     }
-  }
+}
 
 /* Navigation Bar */
 
@@ -174,7 +180,8 @@ html.light .linkedin-icon::before {
     justify-content: flex-end;
 }
 
-.navbar__title > a, .navbar__menu > a {
+.navbar__title>a,
+.navbar__menu>a {
     /* fetching light/dark theme colour */
     color: var(--text);
 }
@@ -185,16 +192,21 @@ img {
 
 .landing-img {
     width: 100%;
-    max-width: 400px; /* Adjust this value to your desired maximum width */
-    height: auto; /* Maintains the aspect ratio */
-    display: block; /* Ensures no inline spacing issues */
-    margin: 0 auto; /* Center the image horizontally if the container is wider */
-  }
+    max-width: 400px;
+    /* Adjust this value to your desired maximum width */
+    height: auto;
+    /* Maintains the aspect ratio */
+    display: block;
+    /* Ensures no inline spacing issues */
+    margin: 0 auto;
+    /* Center the image horizontally if the container is wider */
+}
 
 @keyframes loadAnimation {
     0% {
         clip-path: inset(100% 0 0 0);
     }
+
     100% {
         clip-path: inset(0 0 0 0);
         opacity: 1;
@@ -214,7 +226,7 @@ img {
     list-style: none;
 }
 
-html.light .card{
+html.light .card {
     background: var(--background-light);
     box-shadow: 0 4px 8px #F56F7E;
 }
@@ -227,6 +239,7 @@ html.light .card a {
     text-decoration: none;
     color: var(--text-light);
 }
+
 .card a {
     text-decoration: none;
     color: var(--text);
@@ -307,20 +320,20 @@ html.light .footer-link {
 
 /* Theme Icon */
 
-.light .navbar__title > a {
+.light .navbar__title>a {
     color: var(--text-light);
 }
 
-.light .navbar__menu > a {
+.light .navbar__menu>a {
     color: var(--text-light);
 }
 
 .light .card__title {
-    color: var(--text-light); 
+    color: var(--text-light);
 }
 
 .light .card__txt {
-    color: var(--text-light); 
+    color: var(--text-light);
 }
 
 .light .btn {
@@ -336,13 +349,13 @@ html.light .footer-link {
     color: var(--text-link-light);
     border-color: var(--text-link-light) !important;
     background-color: var(--background-light) !important;
-} 
+}
 
 #wcb.wcb-d #wcb_a {
     background: var(--text-link-light) !important;
     color: var(--background-light) !important;
     border-color: var(--text-link-light) !important;
-} 
+}
 
 /* Media Query */
 @media only screen and (max-width: 600px) {
@@ -355,7 +368,7 @@ html.light .footer-link {
         flex: unset;
     }
 
-    .navbar__menu > a {
+    .navbar__menu>a {
         margin: 0 11px;
     }
 
@@ -367,8 +380,3 @@ html.light .footer-link {
         justify-content: center;
     }
 }
-
-
-
-
-

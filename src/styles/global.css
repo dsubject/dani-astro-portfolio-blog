@@ -357,6 +357,10 @@ html.light .footer-link {
     border-color: var(--text-link-light) !important;
 }
 
+html.light #wcb.wcb-d #wcb_2 {
+    color: var(--text-link-light) !important;
+}
+
 /* Media Query */
 @media only screen and (max-width: 600px) {
     .navbar__title {

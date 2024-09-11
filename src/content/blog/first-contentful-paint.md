@@ -12,7 +12,7 @@ description: "Learn how optimizing First Contentful Paint (FCP) can improve both
 
 **<h2>What is the First Paint and Why Does it Matter?</h2>**
 
-The <b>First Contentful Paint (FCP)</b> refers to the moment when the browser first renders something - anything - on the screen. From the user's perspective, it's when the website begins to feel responsive and interactive. For developers reading this, FCP measures how long it takes the browser to render the first piece of content to the DOM when a user navigates to your page. It could be a background colour, a logo, or text. 
+The <b>First Contentful Paint (FCP)</b> refers to the moment when the browser first renders something — anything — on the screen. From the user's perspective, it's when the website begins to feel responsive and interactive. For developers reading this: FCP measures how long it takes the browser to render the first piece of content to the DOM when a user navigates to your page. It could be a background colour, a logo, or text. 
 
 From an environmental perspective, first paint is a critical point where energy consumption is at its highest. The longer it takes to load and render content, the more processing power is required on both the server and client side, which translates to more energy usage.
 

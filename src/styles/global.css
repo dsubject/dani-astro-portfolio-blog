@@ -303,6 +303,10 @@ html.light .footer-link {
     color: var(--text-link-light);
 }
 
+html.light a {
+    color: var(--text-link-light);
+}
+
 /* 404 */
 .lost {
     margin-top: 30%;

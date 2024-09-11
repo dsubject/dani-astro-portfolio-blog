@@ -24,7 +24,7 @@ A slower first paint not only results in a poor user experience but also increas
 
 - **Client-side energy use:** Devices, especiallly mobile phones, consume more battery power when forced to render heavy or inefficently loaded content. Optimizing for first paint reduces strain on the user's device, making your site more energy efficient for everyone.
 
-- **Reduced data transer:** Loading essential content faster means less time spent on unnecessary network requests, which minimizes energy=intensive data transfers between servers and clients.
+- **Reduced data transer:** Loading essential content faster means less time spent on unnecessary network requests, which minimizes energy-intensive data transfers between servers and clients.
 
 **<h2>What is a Good FCP Score?</h2>**
 

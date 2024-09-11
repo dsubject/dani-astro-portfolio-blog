@@ -70,4 +70,4 @@ There are many tools out there for measuring FCP - I personally use <a href=
 
 **<h2>Sustainability as a Core Developer Responsibility</h2>**
 
-Sustainability in web development isn't a buzzword - it's a responsibility. As developers, we have the power to reduce the environmental impact of our work, and optimizing the first paint is one of the most effective ways to do so. By building fast, efficient websites that are optimized for performance, we not only provide better user experiences but also contribute to a greener, more sustainable digital world.
+As developers, we have the power to reduce the environmental impact of our work, and optimizing the first paint is one of the most effective ways to do so. By building fast, efficient websites that are optimized for performance, we not only provide better user experiences but also contribute to a greener, more sustainable digital world.

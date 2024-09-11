@@ -6,7 +6,8 @@ export const blogPostDataSchema = z.object({
   description: z.string(),
   pubDate: z.date(),
   tags: z.array(z.string()),
-  updatedDate: z.date().optional()
+  updatedDate: z.date().optional(),
+  image: z.string().optional()
 });
 
 // Derive the TypeScript type from the Zod schema

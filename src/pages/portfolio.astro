@@ -1,0 +1,46 @@
+---
+import Layout from '../layouts/BlogPost.astro';
+import { getCollection } from "astro:content";
+import { sortPostsByDateDesc } from "../utils/functions";
+import { SITE_TITLE } from '../consts';
+
+// Fetch and log the blog posts
+const posts = await getCollection('blog').then((posts) => {
+  return sortPostsByDateDesc(posts);
+});
+---
+
+<Layout title={`My Work`} description="About Dani Subject">
+  <div class="portfolio-list">
+          <picture>
+            <source srcset="/mockups.png" type="image/webp">
+            <source srcset="/mockups.png" type="image/png">
+            <img class="landing-img" loading="lazy" alt="Cartoon image of a woman sitting with her dog on a bench" src="/mockups.png" />
+      </picture>
+      <div class="portfolio-item-desc">
+        <h2>Subject Designs</h2>
+        <p>I built the <a href="https://subjectdesigns.com/" target="_blank">Subject Designs</a> website using Eleventy and SASS, focusing on performance and sustainability. Key features include image optimization, responsive design, and sustainability, achieving 100% Lighthouse scores and an A+ rating from the Website Carbon Calculator.</p>
+      </div>
+  </div>
+  <style>
+    .h1 {
+        margin-top: 20px;
+    }
+    .portfolio-list {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .portfolio-item-desc {
+        width: 40%;
+    }
+    @media (max-width: 480px) {
+        .portfolio-list {
+            flex-direction: column;
+        }
+        .portfolio-item-desc {
+            width: unset;
+        }
+    }
+  </style>
+</Layout>

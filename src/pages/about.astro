@@ -5,48 +5,71 @@ import { SITE_TITLE } from '../consts';
 const updatedDate = '2024-07-17'; // Set the last updated date here
 ---
 
-<Layout title={`About Me`} description="About Dani Subject">
-	<div>
-		<div class="about-txt">
-			<p>
-				Hello! My name is Dani Subject, and I'm an English major turned software developer. I've been developing for 6 years now, 
-				having worked in start-ups and currently consulting at a larger corporation. Due to the nature of consulting, I've had the opportunity to develop 
-				a wide variety of applications, from web to iOS and Android. However, I'll always be a JavaScript developer at heart. 
-				I've worked with multiple frameworks, including Angular and React, but I don't believe in limiting myself to one framework. Part of being a 
-				sustainable developer is knowing how to pick the right technology for the job. Sometimes, all you need is a static 
-				site to do the trick.
-			</p>
-			<img width="350" height="350" src="/irl-me.png" alt="Description of image 1" />
-		</div>
-		<p>
-			I've always been an environmentalist. I'm very involved in community garden planting outside of work, and you may have seen some photos of me with beehives. Naturally, my love for the planet has found its way into my life as a coder. I believe sustainable digital products are the future: as developers, it is our responsibility to reduce our digital footprint as much as possible by writing code that is efficient, clean, and maintainable. Building applications that minimize energy usage on our users' devices, reduce the digital world's carbon footprint, and remain reliable even when the grid or network is down is crucial. We must develop software that doesn't contribute to climate problems while ensuring it stays accessible and functional for users in all conditions. Afterall, <i><b>none of this matters if we don't have a planet to stand on.</b></i>
-		</p>
-	</div>
+<Layout description="About Dani Subject">
+	  <section>
+    <h1>Hi 👋 I'm Dani Subject</h1>
 
-	<style>
-		.about-txt {
-			display: flex;
-			flex-direction: row;
-		}
-		
-		@media (max-width: 768px) {
-			.about-txt {
-				display: flex;
-				flex-direction: column;
-			}
-			img {
-				align-self: center;
-			}
-		}
+    <h2>Software Developer | Environmentalist 🌱</h2>
+    <p>
+      Hello! My name is Dani Subject, and I'm an English major turned software developer. I've been developing for 6 years, 
+      having worked in start-ups and currently consulting at a larger corporation. Due to the nature of consulting, I've had the 
+      opportunity to develop a wide variety of applications, from web to iOS and Android.
+    </p>
 
-		@media (max-width: 480px) {
-			.about-txt {
-				display: flex;
-				flex-direction: column;
-			}
-			img {
-				align-self: center;
-			}
-		}
-	</style>
+    <p>
+      However, I'll always be a JavaScript developer at heart. I've worked with multiple frameworks, including Angular and React, but I don't believe in limiting myself to one framework. 
+      Part of being a sustainable developer is knowing how to pick the right technology for the job. Sometimes, all you need is a static site to do the trick.
+    </p>
+
+    <hr />
+
+    <h3>🌟 About Me</h3>
+    <p>
+      Outside of work, I'm passionate about sustainability. I'm actively involved in community garden planting, and you may have seen some photos of me with beehives. 
+      Naturally, my love for the planet has found its way into my work as a coder.
+    </p>
+
+    <p>
+      I believe that sustainable digital products are the future. As developers, we have a responsibility to reduce our digital footprint by writing code that is efficient, clean, and maintainable. 
+      Building applications that minimize energy usage on our users' devices, reduce the digital world's carbon footprint, and remain reliable even when the grid or network is down is crucial.
+	  <i><b>None of this matters if we don't have a planet to stand on.</b></i>
+    </p>
+
+    <hr />
+
+    <h3>🛠 Tech Stack</h3>
+    <ul>
+      <li><strong>Languages</strong>: JavaScript, TypeScript, Kotlin</li>
+      <li><strong>Frameworks</strong>: React, Angular, Next.js, React Native</li>
+      <li><strong>Platforms</strong>: Android</li>
+      <li><strong>Other Skills</strong>: Static Site Generation, Web Performance Optimization</li>
+    </ul>
+
+    <hr />
+
+    <h3>🌍 Let's Connect!</h3>
+    <ul>
+      <li><a href="https://www.linkedin.com/in/danielle-subject" target="_blank">LinkedIn</a></li>
+      <li><a href="https://dev.to/danisubject" target="_blank">Dev.to</a></li>
+      <li><a href="https://github.com/dsubject" target="_blank">GitHub</a></li>
+    </ul>
+
+  </section>
+  <style>
+    section {
+      font-family: sans-serif;
+      line-height: 1.6;
+    }
+
+    ul {
+      list-style-type: disc;
+      margin-left: 20px;
+    }
+
+    @media (max-width: 768px) {
+      ul {
+        padding-left: 0;
+      }
+    }
+  </style>
 </Layout>

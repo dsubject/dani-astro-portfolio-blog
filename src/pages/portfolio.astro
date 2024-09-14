@@ -11,36 +11,110 @@ const posts = await getCollection('blog').then((posts) => {
 ---
 
 <Layout title={`My Work`} description="About Dani Subject">
-  <div class="portfolio-list">
-          <picture>
-            <source srcset="/mockups.png" type="image/webp">
-            <source srcset="/mockups.png" type="image/png">
-            <img class="landing-img" loading="lazy" alt="Cartoon image of a woman sitting with her dog on a bench" src="/mockups.png" />
-      </picture>
-      <div class="portfolio-item-desc">
-        <h2>Subject Designs</h2>
-        <p>I built the <a href="https://subjectdesigns.com/" target="_blank">Subject Designs</a> website using Eleventy and SASS, focusing on performance and sustainability. Key features include image optimization, responsive design, and sustainability, achieving 100% Lighthouse scores and an A+ rating from the Website Carbon Calculator.</p>
-      </div>
-  </div>
+  <section>
+    <h2>💻 Technologies I Use</h2>
+    <ul>
+      <li><strong>Languages</strong>: JavaScript, TypeScript, Kotlin</li>
+      <li><strong>Frameworks & Libraries</strong>: React, Angular, Next.js, Eleventy</li>
+      <li><strong>Platforms</strong>: iOS, Android</li>
+      <li><strong>Other Tools</strong>: SASS, Web Performance Optimization, Static Site Generators</li>
+    </ul>
+
+    <hr />
+
+    <h2>🌟 Websites I've Built</h2>
+    <ul>
+      <li>
+        <a href="https://subjectdesigns.com" target="_blank"><strong>Subject Designs</strong></a> <br />
+        <em>Tech Stack:</em> Eleventy, SASS, Netlify <br />
+        <em>Description:</em> A portfolio and business website for a small business offering renovation and inspection services. Focused on sustainable design with optimized image loading and performance.
+      </li>
+
+      <li>
+        <a href="https://example.com" target="_blank"><strong>Project Name</strong></a> <br />
+        <em>Tech Stack:</em> Next.js, Tailwind CSS <br />
+        <em>Description:</em> A responsive website for a local restaurant, featuring dynamic menu updates, customer reviews, and reservation functionality.
+      </li>
+
+      <li>
+        <a href="https://example.com" target="_blank"><strong>Project Name</strong></a> <br />
+        <em>Tech Stack:</em> React, Firebase, Node.js <br />
+        <em>Description:</em> A custom CRM system for a real estate company, allowing agents to track leads, manage property listings, and automate client communications.
+      </li>
+
+      <li>
+        <a href="https://example.com" target="_blank"><strong>Project Name</strong></a> <br />
+        <em>Tech Stack:</em> Angular, Express.js, MongoDB <br />
+        <em>Description:</em> A health and wellness app with a custom dashboard for tracking fitness goals, managing meal plans, and syncing with wearable devices.
+      </li>
+    </ul>
+
+    <hr />
+
+    <h2>🏢 Professional Experience</h2>
+    <h3>IBM Canada (2017–2023)</h3>
+    <p><strong>Frontend Developer (Consultant)</strong></p>
+    <ul>
+      <li>Developed user interfaces for mobile and web banking applications for clients including BMO, PNC, and Scotiabank.</li>
+      <li>Collaborated with cross-functional teams to deliver secure and scalable solutions.</li>
+      <li>Optimized application performance and ensured accessibility compliance.</li>
+    </ul>
+
+    <hr />
+
+    <h2>🌍 Let's Connect</h2>
+    <ul>
+      <li><a href="https://www.linkedin.com/in/danielle-subject" target="_blank">LinkedIn</a></li>
+      <li><a href="https://dev.to/danisubject" target="_blank">Dev.to</a></li>
+      <li><a href="https://github.com/dsubject" target="_blank">GitHub</a></li>
+      <li><a href="https://daniellesubject.com" target="_blank">Personal Website</a></li>
+    </ul>
+
+    <hr />
+
+    <h2>📜 License</h2>
+    <p>All code and projects showcased here are my own or have been built in collaboration with clients and teams.</p>
+  </section>
+
   <style>
-    .h1 {
-        margin-top: 20px;
+    section {
+      font-family: sans-serif;
+      line-height: 1.6;
+      margin: 0 auto;
+      max-width: 800px;
     }
-    .portfolio-list {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
+
+    ul {
+      list-style-type: disc;
+      margin-left: 20px;
     }
-    .portfolio-item-desc {
-        width: 40%;
+
+    hr {
+      margin: 30px 0;
+      border: none;
+      border-top: 1px solid #ddd;
     }
-    @media (max-width: 480px) {
-        .portfolio-list {
-            flex-direction: column;
-        }
-        .portfolio-item-desc {
-            width: unset;
-        }
+
+    blockquote {
+      font-size: 1.2em;
+      margin: 20px 0;
+      padding: 10px 20px;
+      background-color: #f9f9f9;
+      border-left: 5px solid #ccc;
+    }
+
+    a {
+      color: #0066cc;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      ul {
+        padding-left: 0;
+      }
     }
   </style>
 </Layout>

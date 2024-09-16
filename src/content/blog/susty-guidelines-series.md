@@ -2,9 +2,11 @@
 slug: "/sustainability-guidelines"
 pubDate: "2024-09-16"
 title: "Introducing the Web Sustainability Guidelines (WSG)"
-tags: ["tech", "green code"]
+tags: ["tech", "green code", "WSG guidelines"]
 description: "Exploring the Web Sustainability Guidelines"
 ---
+
+*Series: Exploring the Web Sustainability Guidelines (WSG), Part 1*
 
 <i>Welcome to the first post in a multi-part series on the Web Sustainability Guidelines (WSG). In this series, I aim to highlight the significant work being done to develop these guidelines and underscore their relevance in reducing the environmental impact of the internet. Additionally, I’ll provide insights to help developers, designers, and digital creators better understand the WSG and how to apply them in practice to create more sustainable digital products.</i>
 

@@ -2,6 +2,7 @@
 slug: "/blog/writers-journey"
 pubDate: "2018-10-22"
 title: "A writer's journey into programming"
+showTitle: "true"
 tags: ["tech", "career"]
 description: "If you had told me in 2017 that I would become a programmer I would have probably (absolutely) laughed. Read about my journey from content writing in radio to software development."
 ---

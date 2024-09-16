@@ -2,6 +2,7 @@
 slug: "/first-contentful-paint"
 pubDate: "2024-09-11"
 title: "Sustainability in Web Development: The Critical Role of Optimizing First Paint"
+showTitle: "true"
 tags: ["tech", "green code"]
 description: "Learn how optimizing First Contentful Paint (FCP) can improve both website performance and sustainability. Discover practical strategies to speed up page loads, reduce energy consumption, and enhance user experience."
 ---

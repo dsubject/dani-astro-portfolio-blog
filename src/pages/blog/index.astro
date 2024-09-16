@@ -20,6 +20,13 @@ const posts = await getCollection('blog').then((posts) => {
 		main {
 			margin-top: 5rem;
 		}
+		h1 {
+			text-align: center;
+		}
+		hr {
+			margin-top: 1rem;
+			margin-bottom: 2rem;
+		}
 		ul {
 			display: flex;
 			flex-wrap: wrap;
@@ -27,7 +34,7 @@ const posts = await getCollection('blog').then((posts) => {
 			padding: 0;
 		}
 		ul li {
-			width: calc(45% - 1rem);
+			width: 100%;
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
@@ -71,7 +78,9 @@ const posts = await getCollection('blog').then((posts) => {
   <body>
     <Header />
     <main>
-      <section>
+      <section>		
+	  	<h1>All Posts</h1>
+		<hr/>
         <ul>
           {posts.map((post) => {
             return (
@@ -82,7 +91,8 @@ const posts = await getCollection('blog').then((posts) => {
 						<span>{tag}</span>
 						))}
 					</div>
-					<h3>{post.data.title}</h3>
+					<h2>{post.data.title}</h2>
+					<p>{post.data.description}</p>
 					<p class="date">
 					{new Date(post.data.pubDate).toLocaleDateString()}
 					</p>

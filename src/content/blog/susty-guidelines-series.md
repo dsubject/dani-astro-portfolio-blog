@@ -2,8 +2,9 @@
 slug: "/sustainability-guidelines"
 pubDate: "2024-09-16"
 title: "Introducing the Web Sustainability Guidelines (WSG)"
+showTitle: "true"
 tags: ["tech", "green code", "WSG guidelines"]
-description: "Exploring the Web Sustainability Guidelines"
+description: "The first post in a multi-part series on the Web Sustainability Guidelines (WSG)"
 ---
 
 *Series: Exploring the Web Sustainability Guidelines (WSG), Part 1* 🌱

@@ -6,7 +6,7 @@ import Footer from '../components/Footer.astro';
 
 type Props = CollectionEntry<'blog'>['data'];
 
-const { title, description, pubDate } = Astro.props;
+const { title, description, pubDate, showTitle } = Astro.props;
 ---
 
 <html lang="en">
@@ -47,9 +47,9 @@ const { title, description, pubDate } = Astro.props;
 			<article>
 				<div class="prose">
 					<div class="title">
-						<h1>{title}</h1>
+						{showTitle && <h1>{title}</h1>} <!-- Conditionally render title -->
 						{pubDate && <p>Published on: {new Date(pubDate).toLocaleDateString()}</p>}
-						<hr />
+						{showTitle && <hr />} <!-- Conditionally render hr -->
 					</div>
 					<slot />
 				</div>

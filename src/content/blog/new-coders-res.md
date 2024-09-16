@@ -2,6 +2,7 @@
 slug: "/blog/new-coders-res"
 pubDate: "2019-06-06"
 title: "Resources for new coders"
+showTitle: "true"
 tags: ["tech", "career"]
 description: "A helpful article for those thinking about getting into coding"
 ---

@@ -1,15 +1,39 @@
 ---
-import Layout from '../layouts/BlogPost.astro';
+import Layout from '../layouts/Layout.astro';
 import { SITE_TITLE } from '../consts';
 
 const updatedDate = '2024-07-17'; // Set the last updated date here
 ---
 
-<Layout title={`About`} description="About Dani Subject">
-	  <section>
+<Layout pageTitle={`About | ${SITE_TITLE}`}>
+	<section>
+    <div class="title-img-container">
+      <div class="bio-content">
+        <h1 class="home-title">Dani Subject, developer and sustainable web advocate</h1>
+        <div class="social-links">
+          <ul class="social-list-items">
+            <li class="icon-btn">
+              <a class="icon-link" href="https://github.com/dsubject" target="_blank">
+                <span class="social-icon git-icon">GitHub</span>
+              </a>
+            </li>
+            <li class="icon-btn">
+              <a class="icon-link" href="https://linkedin.com/in/danielle-subject" target="_blank">
+                <span class="social-icon linkedin-icon">LinkedIn</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <picture>
+        <source srcset="/cropped-cartoon-2-tinied.webp" type="image/webp">
+        <source srcset="/cropped-cartoon-2-tinied.png" type="image/png">
+        <img class="landing-img" loading="lazy" alt="Cartoon image of a woman sitting with her dog on a bench" src="/cropped-cartoon-2-tinied.png" />
+      </picture>
+    </div>
     <h2>Software Developer | Environmentalist 🌱</h2>
     <p>
-      Hello! 👋 My name is Dani Subject, and I'm an English major turned software developer. I've been developing for over 6 years, 
+      Hello! 👋 My name is Dani, and I'm an English major turned software developer. I've been developing for over 6 years, 
       having worked in start-ups and currently consulting at a larger corporation. Due to the nature of consulting, I've had the 
       opportunity to develop a wide variety of applications, from web to iOS and Android.
     </p>
@@ -46,18 +70,12 @@ const updatedDate = '2024-07-17'; // Set the last updated date here
   <style>
     section {
       font-family: sans-serif;
-      line-height: 1.6;
     }
 
-    ul {
-      list-style-type: disc;
-      margin-left: 20px;
-    }
-
-    @media (max-width: 768px) {
-      ul {
-        padding-left: 0;
-      }
-    }
+	@media (max-width: 600px) {
+		h1 {
+			text-align: center;
+		}
+	}
   </style>
 </Layout>

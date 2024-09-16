@@ -1,7 +1,7 @@
 /* Global styles */
 :root {
     --background: #1e1e2e;
-    --background-light: #FFF6F1;
+    --background-light: #FFFFFF;
     --button: #78c2ad;
     --text: #FFF6F1;
     --text-light: #1e1e2e;
@@ -48,6 +48,14 @@ p {
     font-family: var(--body);
     font-size: 1.1rem;
     line-height: 1.5;
+}
+
+a {
+    color: var(--text);
+}
+
+html.light a {
+    color: var(--text-link-light);
 }
 
 /* For inline code */
@@ -300,10 +308,6 @@ footer {
 }
 
 html.light .footer-link {
-    color: var(--text-link-light);
-}
-
-html.light a {
     color: var(--text-link-light);
 }
 

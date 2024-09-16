@@ -6,9 +6,9 @@ tags: ["tech", "green code", "WSG guidelines"]
 description: "Exploring the Web Sustainability Guidelines"
 ---
 
-*Series: Exploring the Web Sustainability Guidelines (WSG), Part 1*
+*Series: Exploring the Web Sustainability Guidelines (WSG), Part 1* 🌱
 
-<i>Welcome to the first post in a multi-part series on the Web Sustainability Guidelines (WSG). In this series, I aim to highlight the significant work being done to develop these guidelines and underscore their relevance in reducing the environmental impact of the internet. Additionally, I’ll provide insights to help developers, designers, and digital creators better understand the WSG and how to apply them in practice to create more sustainable digital products.</i>
+*Welcome to the first post in a multi-part series on the Web Sustainability Guidelines (WSG). In this series, I aim to highlight the significant work being done to develop these guidelines and underscore their relevance in reducing the environmental impact of the internet* 🌍. *Additionally, I’ll provide insights to help developers, designers, and digital creators better understand the WSG and how to apply them in practice to create more sustainable digital products* 💻.
 
 <hr/>
 
@@ -20,13 +20,13 @@ These guidelines are based on three foundational principles: <b>Planet, People, 
 
 The WSG 1.0 provides a broad range of recommendations for reducing the environmental impact of websites and digital services. These guidelines are structured into four key areas:
 
-1. **User Experience Design**
+1. **<h3>User Experience Design</h3>**
 
-2. **Web Development**
+2. **<h3>Web Development</h3>**
 
-3. **Hosting, Infrastructure, and Systems**
+3. **<h3>Hosting, Infrastructure, and Systems</h3>**
 
-4. **Business Strategy and Product Management**
+4. **<h3>Business Strategy and Product Management</h3>**
 
 Each area offers a mix of principles, guidelines, success criteria, and advisory techniques, allowing developers and organizations to make informed, sustainable decisions throughout the lifecycle of a project​.
 

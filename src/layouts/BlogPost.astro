@@ -6,12 +6,12 @@ import Footer from '../components/Footer.astro';
 
 type Props = CollectionEntry<'blog'>['data'];
 
-const { title, description, pubDate, showTitle } = Astro.props;
+const { title, description, pubDate, showTitle, image } = Astro.props;
 ---
 
 <html lang="en">
 	<head>
-		<BaseHead title={title} description={description} />
+		<BaseHead title={title} description={description} image={image} />
 		<style>
 			main {
 				max-width: 100%;

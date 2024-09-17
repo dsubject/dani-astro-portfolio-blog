@@ -206,10 +206,6 @@ html.light .linkedin-icon::before {
     color: var(--text);
 }
 
-img {
-    animation: loadAnimation 2s ease-out forwards;
-}
-
 .landing-img {
     width: 100%;
     max-width: 400px;

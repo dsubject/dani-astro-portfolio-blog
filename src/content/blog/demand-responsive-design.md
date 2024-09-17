@@ -25,7 +25,10 @@ Carbon intensity describes how clean electricity is. Specifically, it's a measur
 
 Carbon intensity varies throughout different times of the day as well as throughout the year, depending on how many renewables are added to the supply. Unfortunately, you can't turn the wind or sun up when grid demand is high. Therefore, to manage the intermittent nature of renewable sources, a source for baseload generation is required. In many cases, this baseload generation comes from fossil fuels. Peak power demand is often satisfied by sources that can be easily stopped and started, such as burning fossil fuels. 
 
-<img src="/blog/branchmag.png" alt="A box of bees aka nuc" width="100%" />
+<picture>
+  <source srcset="/blog/branchmag.webp" type="image/webp">
+  <img src="/blog/branchmag.jpg" alt="Screenshot of branch magazine" style="width: 100%; height: auto;">
+</picture>
 
 Above is a real-world example of a user interface that responds to different grid intensities using a grid intensity API and the user's location. As you can see in the example, as the carbon intensity of the electrical grid changes, so does Branch magazine's design. 
 

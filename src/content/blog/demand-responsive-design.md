@@ -4,7 +4,7 @@ pubDate: "2022-10-05"
 title: "Demand-Responsive Design: designing apps that respond to grid demand"
 showTitle: "true"
 tags: ["tech", "green code"]
-description: "Explore how demand-responsive design enhances traditional responsive design by creating applications that adapt to electrical grid demand and carbon intensity, contributing to a more sustainable web."
+description: "Explore how demand-responsive design enhances traditional responsive design by creating applications that adapt to electrical grid demand and carbon intensity."
 ---
 
 While advocating for a greener web, I often revisit the concept of a "demand-responsive" design. What would the internet look like if it became common practice to design digital products that adjusted to energy demand?

@@ -334,4 +334,8 @@ html.light #wcb.wcb-d #wcb_2 {
     .social-list-items {
         justify-content: center;
     }
+
+    .home-title {
+        text-align: center;
+    }
 }

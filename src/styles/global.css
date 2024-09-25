@@ -89,7 +89,7 @@ li {
     align-self: center;
 }
 
-.bio-content {
+.header-title-links {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -172,7 +172,7 @@ html.light .linkedin-icon::before {
         align-items: center;
     }
 
-    .bio-content {
+    .header-title-links {
         flex-direction: column;
         display: flex;
         /* align-items: center; */

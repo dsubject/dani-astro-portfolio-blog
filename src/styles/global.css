@@ -98,12 +98,8 @@ li {
 
 .landing-img {
     width: 100%;
-    max-width: 400px;
+    max-width: 100%;
     height: auto;
-    /* Maintains the aspect ratio */
-    display: block;
-    /* Ensures no inline spacing issues */
-    margin: 0 auto;
     margin-top: 10px;
 }
 

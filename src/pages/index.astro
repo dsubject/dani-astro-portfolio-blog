@@ -36,9 +36,7 @@ const posts = await getCollection('blog').then((posts) => {
         <img class="landing-img" alt="Cartoon image of a woman sitting with her dog on a bench" src="/cropped-cartoon-2-tinied.png" width="600" height="400" />
       </picture>
     </div>
-    <p class="homepage-bio">
-      As a developer who cares about my impact on the planet, I believe sustainable code matters. My focus is on staying up-to-date with sustainability best practices and educating other developers in the hope of building a digital future we can be proud of.
-    </p>
+
     <h2>Recent Posts</h2>
     <ul class="recent-posts-list">
       {posts.slice(0, 3).map((post) => (

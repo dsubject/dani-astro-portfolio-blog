@@ -249,7 +249,7 @@ html.light .card a {
 
 .tags span {
     background-color: #D7629C;
-    color: var(--text);
+    color: #FFFFFF;
     border-radius: 0.25rem;
     font-size: .75rem;
     padding: 0.25rem 0.5rem;

@@ -36,7 +36,6 @@ const posts = await getCollection('blog').then((posts) => {
         <img class="landing-img" alt="Cartoon image of a woman sitting with her dog on a bench" src="/cropped-cartoon-2-tinied.png" width="600" height="400" />
       </picture>
     </div>
-
     <h2>Recent Posts</h2>
     <ul class="recent-posts-list">
       {posts.slice(0, 3).map((post) => (

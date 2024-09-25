@@ -12,7 +12,7 @@ const posts = await getCollection('blog').then((posts) => {
 
 <Layout pageTitle={`Home | ${SITE_TITLE}`}>
   <div class="landing-container">
-    <div class="title-img-container">
+    <div class="header-content">
       <div class="bio-content">
         <h1 class="home-title">Dani Subject, developer and sustainable web advocate</h1>
         <div class="social-links">
@@ -57,4 +57,24 @@ const posts = await getCollection('blog').then((posts) => {
       ))}
     </ul>
   </div>
+
+  <style>
+    .landing-container {
+      display: flex;
+      flex-direction: column;
+    }
+    .recent-posts-list {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      padding: 0;
+    }
+
+    /* Media Query */
+    @media only screen and (max-width: 600px) {
+      .landing-container {
+          text-align: center;
+      }
+    }
+  </style>
 </Layout>

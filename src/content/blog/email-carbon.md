@@ -39,9 +39,4 @@ The following are five tips for practicing good email hygiene (and thereby helpi
 
 You might have noticed that the tips I provided for reducing the carbon footprint of your inbox are closely related to tips on freeing up mental space. Cluttered and disorganized inboxes are time-wasters and can lead to feelings of overwhelm and increased stress. Reducing the amount of email sitting in your inbox is not only good for the environment but also good for your mental health.
 
-If you're interested in learning more about the carbon cost of email, check out this <a class="blog-links" href="https://www.cwjobs.co.uk/insights/environmental-impact-of-emails/" target="_blank">email CO2 calculator</a>.
-
-
-
-
-
+If you're interested in learning more about the carbon cost of email, check out this <a href="https://www.cwjobs.co.uk/insights/environmental-impact-of-emails/" target="_blank">email CO2 calculator</a>.

@@ -5,7 +5,7 @@ import { SITE_TITLE } from '../consts';
 
 <Layout title={`About | Dani Subject`} showTitle={false}>
 	<section>
-    <div class="title-img-container">
+    <div class="header-content">
       <div class="bio-content">
         <h1 class="home-title">Dani Subject, developer and sustainable web advocate</h1>
         <div class="social-links">
@@ -29,7 +29,9 @@ import { SITE_TITLE } from '../consts';
         <img class="landing-img" loading="lazy" alt="Cartoon image of a woman sitting with her dog on a bench" src="/cropped-cartoon-2-tinied.png" />
       </picture>
     </div>
+
     <h2>Software Developer | Environmentalist 🌱</h2>
+
     <p>
       Hello! 👋 My name is Dani, and I'm an English major turned software developer. I've been developing for over 6 years, 
       having worked in start-ups and currently consulting at a larger corporation. Due to the nature of consulting, I've had the 
@@ -43,16 +45,15 @@ import { SITE_TITLE } from '../consts';
 
     <hr />
 
-    <h3>🌟 About Me</h3>
     <p>
-      Outside of work, I'm passionate about sustainability. I'm actively involved in community garden planting, and you may have seen some photos of me with beehives. 
+      Outside of work, I'm actively involved in community garden planting, and you may have seen some photos of me with beehives. 
       Naturally, my love for the planet has found its way into my work as a coder.
     </p>
 
     <p>
       I believe that sustainable digital products are the future. As developers, we have a responsibility to reduce our digital footprint by writing code that is efficient, clean, and maintainable. 
       Building applications that minimize energy usage on our users' devices, reduce the digital world's carbon footprint, and remain reliable even when the grid or network is down is crucial.
-	  <i><b>None of this matters if we don't have a planet to stand on.</b></i>
+	    <i><b>None of this matters if we don't have a planet to stand on.</b></i>
     </p>
 
     <hr />
@@ -65,15 +66,17 @@ import { SITE_TITLE } from '../consts';
     </ul>
 
   </section>
+
   <style>
     section {
       font-family: sans-serif;
     }
 
-	@media (max-width: 600px) {
-		h1 {
-			text-align: center;
-		}
-	}
+    @media (max-width: 600px) {
+      h1 {
+        text-align: center;
+      }
+    }
   </style>
+
 </Layout>

@@ -12,33 +12,6 @@ const { title, description, pubDate, showTitle, image } = Astro.props;
 <html lang="en">
 	<head>
 		<BaseHead title={title} description={description} image={image} />
-		<style>
-			main {
-				max-width: 100%;
-				margin: 0;
-			}
-			h1 {
-				font-size: 2rem;
-			}
-			.prose {
-				width: 720px;
-				max-width: calc(100% - 2em);
-				margin: auto;
-				padding: 1em;
-			}
-			.title {
-				margin-bottom: 1em;
-				padding: 1em 0;
-				text-align: center;
-				line-height: 1;
-			}
-			.title h1 {
-				margin: 0 0 0.5em 0;
-			}
-			.date {
-				margin-bottom: 0.5em;
-			}
-		</style>
 	</head>
 
 	<body>
@@ -58,3 +31,26 @@ const { title, description, pubDate, showTitle, image } = Astro.props;
 		<Footer />
 	</body>
 </html>
+
+<style>
+	main {
+		max-width: 100%;
+		margin: 0;
+	}
+	.prose {
+		width: 720px;
+		max-width: calc(100% - 2em);
+		margin: auto;
+		padding: 1em;
+	}
+	.title {
+		margin-bottom: 1em;
+		padding: 1em 0;
+		text-align: center;
+		line-height: 1;
+	}
+	.title h1 {
+		font-size: 2rem;
+		margin: 0 0 0.5em 0;
+	}
+</style>

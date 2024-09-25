@@ -75,12 +75,9 @@ li {
     font-family: var(--body);
 }
 
-.landing-container {
-    display: flex;
-    flex-direction: column;
-}
+/* Header Content (image, title, bio) */
 
-.title-img-container {
+.header-content {
     display: flex;
     flex-direction: row;
     margin-top: 4.2rem;
@@ -96,6 +93,16 @@ li {
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.landing-img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    /* Maintains the aspect ratio */
+    display: block;
+    /* Ensures no inline spacing issues */
+    margin: 0 auto;
 }
 
 /* Social Links */
@@ -120,7 +127,6 @@ li {
     display: flex;
     align-items: center;
     gap: 8px;
-    /* Space between icon and text */
 }
 
 html.light .icon-link {
@@ -161,7 +167,7 @@ html.light .linkedin-icon::before {
 }
 
 @media (max-width: 600px) {
-    .title-img-container {
+    .header-content {
         flex-direction: column;
         align-items: center;
     }
@@ -184,38 +190,15 @@ html.light .linkedin-icon::before {
     width: 100%;
 }
 
-.navbar__title {
-    font-family: var(--header);
-    font-size: 1.3rem;
-}
-
 .navbar__menu {
     font-family: var(--body);
     font-size: 1.1rem;
     flex: 1;
 }
 
-.theme-icon-container {
-    display: flex;
-    justify-content: flex-end;
-}
-
-.navbar__title>a,
 .navbar__menu>a {
     /* fetching light/dark theme colour */
     color: var(--text);
-}
-
-.landing-img {
-    width: 100%;
-    max-width: 400px;
-    /* Adjust this value to your desired maximum width */
-    height: auto;
-    /* Maintains the aspect ratio */
-    display: block;
-    /* Ensures no inline spacing issues */
-    margin: 0 auto;
-    /* Center the image horizontally if the container is wider */
 }
 
 @keyframes loadAnimation {
@@ -229,16 +212,14 @@ html.light .linkedin-icon::before {
     }
 }
 
-/* Cards */
+/* Blog Post Cards */
+
 .card {
     background: var(--background);
     border-radius: 12px;
     box-shadow: 0 4px 8px var(--background-light);
     padding: 1rem;
     transition: transform 0.2s;
-}
-
-.card {
     list-style: none;
 }
 
@@ -261,13 +242,6 @@ html.light .card a {
     color: var(--text);
 }
 
-.recent-posts-list {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    padding: 0;
-}
-
 .tags {
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
@@ -282,13 +256,8 @@ html.light .card a {
     margin-right: 5px;
 }
 
-/* Items */
-.pro-img {
-    border-radius: 16px;
-    margin-top: 10px;
-}
-
 /* Footer */
+
 footer {
     margin: 4rem 0;
 }
@@ -311,34 +280,7 @@ html.light .footer-link {
     color: var(--text-link-light);
 }
 
-/* 404 */
-.lost {
-    margin-top: 30%;
-    text-align: center;
-}
-
-.lost__header {
-    margin: 0 auto;
-    text-align: center;
-    border: 0;
-    font-size: 7.5rem;
-    letter-spacing: 10px;
-}
-
-.lost__body {
-    color: #5C5B77;
-}
-
-.lost__link {
-    color: var(--text-link);
-    text-decoration: none;
-}
-
 /* Theme Icon */
-
-.light .navbar__title>a {
-    color: var(--text-light);
-}
 
 .light .navbar__menu>a {
     color: var(--text-light);
@@ -361,6 +303,7 @@ html.light .footer-link {
 }
 
 /* Carbon Badge */
+
 #wcb_g {
     color: var(--text-link-light);
     border-color: var(--text-link-light) !important;
@@ -379,10 +322,6 @@ html.light #wcb.wcb-d #wcb_2 {
 
 /* Media Query */
 @media only screen and (max-width: 600px) {
-    .navbar__title {
-        text-align: center;
-    }
-
     .navbar__menu {
         text-align: center;
         flex: unset;
@@ -391,11 +330,7 @@ html.light #wcb.wcb-d #wcb_2 {
     .navbar__menu>a {
         margin: 0 11px;
     }
-
-    .landing-container {
-        text-align: center;
-    }
-
+    
     .social-list-items {
         justify-content: center;
     }

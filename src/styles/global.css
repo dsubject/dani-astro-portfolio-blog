@@ -179,8 +179,6 @@ html.light .linkedin-icon::before {
 /* Navigation Bar */
 
 .navbar {
-    display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
     margin-top: 0.8rem;
@@ -188,6 +186,8 @@ html.light .linkedin-icon::before {
 }
 
 .navbar__menu {
+    display: flex;
+    flex-direction: column;
     font-family: var(--body);
     font-size: 1.1rem;
     flex: 1;
@@ -206,6 +206,64 @@ html.light .linkedin-icon::before {
     100% {
         clip-path: inset(0 0 0 0);
         opacity: 1;
+    }
+}
+
+.hamburger {
+    padding-right: 20px;
+    cursor: pointer;
+}
+
+.hamburger .line {
+    display: block;
+    width: 40px;
+    height: 5px;
+    margin-bottom: 10px;
+    background-color: #ff9776;
+}
+
+.nav-links {
+    width: 100%;
+    top: 5rem;
+    left: 48px;
+    display: none;
+    margin: 0;
+}
+
+.nav-links a {
+    display: block;
+    text-align: center;
+    padding: 10px 0;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.expanded {
+    display: unset;
+}
+
+@media screen and (min-width: 636px) {
+    .navbar__menu {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .nav-links {
+        display: block;
+        position: static;
+        width: auto;
+        background: none;
+    }
+
+    .nav-links a {
+        display: inline-block;
+        padding: 15px 20px;
+    }
+
+    .hamburger {
+        display: none;
     }
 }
 
@@ -278,7 +336,7 @@ html.light .footer-link {
 
 /* Theme Icon */
 
-.light .navbar__menu>a {
+.light .header-link-container>a {
     color: var(--text-light);
 }
 

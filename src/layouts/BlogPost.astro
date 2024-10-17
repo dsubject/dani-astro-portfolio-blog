@@ -11,7 +11,7 @@ const { title, description, pubDate, showTitle, image } = Astro.props;
 
 <html lang="en">
 	<head>
-		<BaseHead title={title} description={description} image={image} />
+		<BaseHead title={`${title} | Dani Subject`} description={description} image={image} />
 	</head>
 
 	<body>
@@ -20,16 +20,22 @@ const { title, description, pubDate, showTitle, image } = Astro.props;
 			<article>
 				<div class="prose">
 					<div class="title">
-						{showTitle && <h1>{title}</h1>} <!-- Conditionally render title -->
+						<h1>{title}</h1>
 						{pubDate && <p>Published on: {new Date(pubDate).toLocaleDateString()}</p>}
-						{showTitle && <hr />} <!-- Conditionally render hr -->
+						<hr />
 					</div>
 					<slot />
 				</div>
 			</article>
 		</main>
 		<Footer />
+		<script>
+			document.querySelector('.hamburger').addEventListener('click', () => {
+			document.querySelector('.nav-links').classList.toggle('expanded');
+			});
+		</script>
 	</body>
+
 </html>
 
 <style>

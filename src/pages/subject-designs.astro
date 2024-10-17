@@ -1,0 +1,90 @@
+---
+import Layout from '../layouts/BlogPost.astro';
+import { getCollection } from "astro:content";
+import { sortPostsByDateDesc } from "../utils/functions";
+import { SITE_TITLE } from '../consts';
+
+// Fetch and log the blog posts
+const posts = await getCollection('blog').then((posts) => {
+  return sortPostsByDateDesc(posts);
+});
+---
+
+<Layout title={`Subject Designs`} showTitle={true}>
+  <section>
+    <h2>How I built Subject Designs' Website</h2>
+    <p>This website was rebuilt with a strong focus on sustainability. The original site, hosted on Squarespace, scored poorly in performance with only 47% on PageSpeed Insights. My goal was to redesign it with sustainability in mind, resulting in a cleaner, more simplified layout optimized for various device sizes, minimal JavaScript, and low page weight. However, since the site is photo-intensive, achieving sustainability posed a unique challenge.</p>
+    <p>Optimizations included:</p>
+    <ul>
+        <li>Image Compression: All images were optimized to be under 200 KB to reduce load times and environmental impact.</li>
+        <li>WebP Format: WebP versions of images were used where possible to ensure efficient loading.</li>
+        <li>Lazy Loading: Images were lazy-loaded to minimize initial page load times and reduce resource usage.</li>
+        <li>Caching: Implemented caching strategies to reduce server load and improve performance for repeat visitors.</li>
+        <li>Srcset for Responsive Images: Utilized srcset to serve the appropriate image size based on the user's device, reducing unnecessary data transfer.</li>
+        <li>Performance and Sustainability: The site scores 100% on Lighthouse for performance, accessibility, and best practices, and received an A+ rating from the Web Carbon Calculator.</li>
+    </ul>
+    </br>
+
+    <h2>Features</h2>
+
+    <ul>
+            <li>Static Site Generation: Powered by Eleventy for fast and efficient builds.</li>
+        <li>Responsive Design: Optimized for all devices.</li>
+        <li>SASS Integration: Custom styling using SASS for modular and maintainable CSS.</li>
+    </ul>
+    <hr />
+
+    <h2>Lighthouse Performance</h2>
+    <p>This website achieves 100% on Lighthouse for performance, SEO, accessibility, and best practices.</p>
+
+        <h2>Lighthouse Performance</h2>
+    <p>This website achieves 100% on Lighthouse for performance, SEO, accessibility, and best practices.</p>
+
+    <hr />
+
+    <h2>📜 License</h2>
+    <p>All code and projects showcased here are my own or have been built in collaboration with clients and teams.</p>
+  </section>
+
+  <style>
+    section {
+      font-family: sans-serif;
+      line-height: 1.6;
+      margin: 0 auto;
+      max-width: 800px;
+    }
+
+    ul {
+      list-style-type: disc;
+      margin-left: 20px;
+    }
+
+    hr {
+      margin: 30px 0;
+      border: none;
+      border-top: 1px solid #ddd;
+    }
+
+    blockquote {
+      font-size: 1.2em;
+      margin: 20px 0;
+      padding: 10px 20px;
+      background-color: #f9f9f9;
+      border-left: 5px solid #ccc;
+    }
+
+    a {
+      color: #0066cc;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      ul {
+        padding-left: 0;
+      }
+    }
+  </style>
+</Layout>

@@ -46,7 +46,13 @@ const posts = await getCollection('blog').then((posts) => {
       </section>
     </main>
     <Footer />
+	<script>
+		document.querySelector('.hamburger').addEventListener('click', () => {
+			document.querySelector('.nav-links').classList.toggle('expanded');
+		});
+	</script>
   </body>
+
 </html>
 
 <style>

@@ -2,7 +2,6 @@
 slug: "/blog/what-is-green-software"
 pubDate: "2022-04-25"
 title: "What is 'green' software?"
-showTitle: "true"
 tags: ["tech", "green code"]
 author: ["Danielle Subject"]
 description: "Green software is an umbrella term for a ton of concepts and ideologies, but to make things simple I'm going to break some concepts down for you by using something we are all familiar with — websites, or web applications."

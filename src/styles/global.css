@@ -132,9 +132,6 @@ html.light .icon-link {
 
 .icon-btn:hover {
     transform: scale(1.1);
-    /* Slightly expand on hover */
-    text-decoration: underline;
-    text-decoration-color: #A562AF;
 }
 
 .social-icon {
@@ -144,23 +141,13 @@ html.light .icon-link {
 }
 
 .social-icon::before {
+    content: url('/arrow-links-white.svg');
     margin-right: 8px;
 }
 
-.git-icon::before {
-    content: url('/github-icon-white.svg');
-}
-
-.linkedin-icon::before {
-    content: url('/linkedin-icon-white.svg');
-}
-
-html.light .git-icon::before {
-    content: url('/github-icon-black.svg');
-}
-
-html.light .linkedin-icon::before {
-    content: url('/linkedin-icon-black.svg');
+html.light .social-icon::before {
+    content: url('/arrow-links.svg');
+    margin-right: 8px;
 }
 
 @media (max-width: 600px) {

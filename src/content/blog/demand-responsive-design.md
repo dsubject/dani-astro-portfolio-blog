@@ -2,7 +2,6 @@
 slug: "/blog/demand-responsive-design"
 pubDate: "2022-10-05"
 title: "Demand-Responsive Design: designing apps that respond to grid demand"
-showTitle: "true"
 tags: ["tech", "green code"]
 description: "Explore how demand-responsive design enhances traditional responsive design by creating applications that adapt to electrical grid demand and carbon intensity."
 ---

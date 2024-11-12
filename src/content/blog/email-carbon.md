@@ -2,7 +2,6 @@
 slug: "/blog/carbon-footprint-of-email"
 pubDate: "2022-02-23"
 title: "How decluttering your email can help the environment"
-showTitle: "true"
 tags: ["tech"]
 description: "Discover how decluttering your email can reduce the carbon footprint of data centers. Learn tips to maintain an eco-friendly inbox and understand the environmental impact of everyday emails."
 ---

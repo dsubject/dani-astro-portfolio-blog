@@ -2,7 +2,6 @@
 slug: "/blog/coder-relationship-with-math"
 pubDate: "2018-12-14"
 title: "A coder's rocky relationship with math"
-showTitle: "true"
 tags: ["tech", "career"]
 ---
 

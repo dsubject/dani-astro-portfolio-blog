@@ -14,12 +14,6 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Install Dependencies
-        run: npm install
-
-      - name: Build Astro Site
-        run: npm run build  # Generates static files in 'dist/'
-
       - name: Install Flyctl
         uses: superfly/flyctl-actions/setup-flyctl@master
 

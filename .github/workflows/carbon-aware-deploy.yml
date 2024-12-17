@@ -38,4 +38,4 @@ jobs:
           FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
         run: |
           echo "Deploying to region: $CLEAN_REGION"
-          flyctl deploy --region $CLEAN_REGION
+          flyctl deploy --regions $CLEAN_REGION

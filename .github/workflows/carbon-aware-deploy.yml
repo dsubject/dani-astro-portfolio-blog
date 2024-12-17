@@ -41,9 +41,9 @@ jobs:
         env:
           FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
 
-      - name: Deploy to Fly.io
+      - name: Deploy to Fly.io in Low-Carbon Region
         run: |
           echo "Deploying to region: $CLEAN_REGION"
-          flyctl deploy --remote-only --regions $CLEAN_REGION 
+          flyctl deploy --remote-only --regions $CLEAN_REGION -a dani-astro-portfolio-blog-dawn-sun-2034
         env:
           FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}

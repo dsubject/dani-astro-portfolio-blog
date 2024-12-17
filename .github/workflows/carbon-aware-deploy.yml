@@ -34,9 +34,16 @@ jobs:
           CLEAN_REGION=$(echo "$RESPONSE" | jq -r '.regions | sort_by(.intensity) | .[0].id')
           echo "CLEAN_REGION=$CLEAN_REGION" >> $GITHUB_ENV
 
+      - name: Scale Down Existing Machines
+        run: |
+          echo "Destroying existing machines..."
+          flyctl machines list -q | xargs -I {} flyctl machines destroy {} --yes
+        env:
+          FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
+
       - name: Deploy to Fly.io
         run: |
           echo "Deploying to region: $CLEAN_REGION"
-          flyctl deploy --remote-only --regions $CLEAN_REGION
+          flyctl deploy --remote-only --regions $CLEAN_REGION --force
         env:
           FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}

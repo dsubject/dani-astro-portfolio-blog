@@ -6,9 +6,6 @@
 app = 'dani-astro-portfolio-blog-dawn-sun-2034'
 primary_region = 'yul'
 
-[build]
-  builder = 'static'
-
 [http_service]
   internal_port = 80
   force_https = true

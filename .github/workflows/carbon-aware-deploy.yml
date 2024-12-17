@@ -31,7 +31,7 @@ jobs:
       - name: Scale Machines in Clean Region
         run: |
           echo "Scaling down machines in all regions..."
-          flyctl scale count 0
+          flyctl scale count 0 --yes
 
           echo "Scaling up machines in region: $CLEAN_REGION"
           flyctl scale count 1 --region $CLEAN_REGION --yes

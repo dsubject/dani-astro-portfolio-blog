@@ -7,7 +7,10 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest
+    name: Deploy app
+    runs-on: ubuntu-latest  
+
+    concurrency: deploy-group  # Optional: prevent parallel deployments
 
     steps:
       - name: Checkout Code
@@ -17,13 +20,10 @@ jobs:
         run: npm install
 
       - name: Build Astro Site
-        run: npm run build  # Generates static files in 'dist/'
+        run: npm run build  # Generate static files in 'dist/'
 
-      - name: Install Fly.io CLI
-        run: |
-          curl -L https://fly.io/install.sh | sh
-          echo "$HOME/.fly/bin" >> $GITHUB_PATH
-          export PATH="$HOME/.fly/bin:$PATH"
+      - name: Install Flyctl
+        uses: superfly/flyctl-actions/setup-flyctl@master
 
       - name: Get Low-Carbon Fly.io Region
         id: carbonaware
@@ -31,17 +31,12 @@ jobs:
           CARBON_API_TOKEN_ID: ${{ secrets.CARBON_API_TOKEN_ID }}
           CARBON_API_TOKEN_SECRET: ${{ secrets.CARBON_API_TOKEN_SECRET }}
         run: |
-          # Query Carbon Aware API with credentials
           RESPONSE=$(curl -s -u "$CARBON_API_TOKEN_ID:$CARBON_API_TOKEN_SECRET" \
             "https://api.carbonaware.cloud/v1/by-provider/fly")
-
-          # Extract the region with the lowest intensity
           CLEAN_REGION=$(echo "$RESPONSE" | jq -r '.regions | sort_by(.intensity) | .[0].id')
           echo "CLEAN_REGION=$CLEAN_REGION" >> $GITHUB_ENV
 
-      - name: Deploy to Fly.io in Low-Carbon Region
+      - name: Deploy to Fly.io
+        run: flyctl deploy --remote-only --regions $CLEAN_REGION
         env:
           FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
-        run: |
-          echo "Deploying to region: $CLEAN_REGION"
-          flyctl deploy --regions $CLEAN_REGION

@@ -7,7 +7,7 @@ on:
 
 jobs:
   deploy:
-    runs-on: carbonrunner-2vcpu-ubuntu-latest  # Use CarbonRunner for low-carbon CI/CD
+    runs-on: carbonrunner-2vcpu-ubuntu-latest  # Use CarbonRunner for eco-friendly execution
 
     steps:
       - name: Checkout Code
@@ -18,15 +18,18 @@ jobs:
           curl -L https://fly.io/install.sh | sh
           export PATH="$HOME/.fly/bin:$PATH"
 
-      - name: Get Low-Carbon Region
+      - name: Get Low-Carbon Fly.io Region
         id: carbonaware
         env:
           CARBON_API_TOKEN_ID: ${{ secrets.CARBON_API_TOKEN_ID }}
           CARBON_API_TOKEN_SECRET: ${{ secrets.CARBON_API_TOKEN_SECRET }}
         run: |
-          # Query Carbon Aware API with authentication
-          CLEAN_REGION=$(curl -s -u "$CARBON_API_TOKEN_ID:$CARBON_API_TOKEN_SECRET" \
-            "https://api.carbonaware.cloud/v1/by-provider/fly" | jq -r '.[0].location')
+          # Query Carbon Aware API with credentials
+          RESPONSE=$(curl -s -u "$CARBON_API_TOKEN_ID:$CARBON_API_TOKEN_SECRET" \
+            "https://api.carbonaware.cloud/v1/by-provider/fly")
+
+          # Extract the region with the lowest intensity
+          CLEAN_REGION=$(echo "$RESPONSE" | jq -r '.regions | sort_by(.intensity) | .[0].id')
           echo "CLEAN_REGION=$CLEAN_REGION" >> $GITHUB_ENV
 
       - name: Deploy to Fly.io in Low-Carbon Region

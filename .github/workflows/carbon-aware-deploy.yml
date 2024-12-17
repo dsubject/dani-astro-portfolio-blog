@@ -16,6 +16,7 @@ jobs:
       - name: Install Fly.io CLI
         run: |
           curl -L https://fly.io/install.sh | sh
+          echo "$HOME/.fly/bin" >> $GITHUB_PATH
           export PATH="$HOME/.fly/bin:$PATH"
 
       - name: Get Low-Carbon Fly.io Region

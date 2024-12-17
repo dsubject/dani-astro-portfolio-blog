@@ -13,6 +13,12 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Build Astro Site
+        run: npm run build  # Generates static files in 'dist/'
+
       - name: Install Fly.io CLI
         run: |
           curl -L https://fly.io/install.sh | sh

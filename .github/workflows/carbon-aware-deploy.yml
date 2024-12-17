@@ -7,7 +7,7 @@ on:
 
 jobs:
   deploy:
-    runs-on: carbonrunner-1vcpu-ubuntu-latest  # Use CarbonRunner for eco-friendly execution
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout Code

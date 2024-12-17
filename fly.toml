@@ -4,7 +4,7 @@
 #
 
 app = 'dani-astro-portfolio-blog-dawn-sun-2034'
-primary_region = 'yul'
+primary_region = 'yyz'
 
 [http_service]
   internal_port = 80

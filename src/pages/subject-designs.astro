@@ -2,7 +2,6 @@
 import Layout from '../layouts/BlogPost.astro';
 import { getCollection } from "astro:content";
 import { sortPostsByDateDesc } from "../utils/functions";
-import { SITE_TITLE } from '../consts';
 
 // Fetch and log the blog posts
 const posts = await getCollection('blog').then((posts) => {

@@ -1,13 +1,12 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { getCollection } from "astro:content";
-import { sortPostsByDateDesc } from "../utils/functions";
 import { SITE_TITLE } from '../consts';
 
 // Fetch and log the blog posts
-const posts = await getCollection('blog').then((posts) => {
-  return sortPostsByDateDesc(posts);
-});
+const posts = await getCollection('blog').then((allPosts) =>
+  allPosts.filter(post => post.data.featured)
+);
 ---
 
 <Layout pageTitle={`Home | ${SITE_TITLE}`}>
@@ -36,7 +35,7 @@ const posts = await getCollection('blog').then((posts) => {
         <img class="landing-img" alt="Cartoon image of a woman sitting with her dog on a bench" src="/cropped-cartoon-2-tinied.png" width="600" height="400" />
       </picture>
     </div>
-    <h2>Recent Posts</h2>
+    <h2>Featured Posts</h2>
     <ul class="recent-posts-list">
       {posts.slice(0, 3).map((post) => (
         <li class="card">
